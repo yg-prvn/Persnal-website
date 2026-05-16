@@ -1,0 +1,380 @@
+:root {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --border: #334155;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+header,
+nav,
+main,
+section,
+article,
+aside,
+footer {
+  padding: 1rem;
+}
+
+header {
+  background: #020617;
+  border-bottom: 1px solid var(--border);
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section,
+article,
+aside {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+article {
+  margin-top: 1rem;
+}
+
+figure {
+  margin: 1rem 0;
+}
+
+figcaption {
+  color: var(--muted);
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+details {
+  margin-top: 1rem;
+  background: #111827;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+footer {
+  margin-top: 2rem;
+  background: #020617;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+ footer {
+      width: 100%;
+      background: var(--card);
+      border-top: 1px solid var(--border);
+      padding: 2rem 1rem;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    /* LEFT */
+    .footer-info h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-info p {
+      color: var(--muted);
+      max-width: 500px;
+      line-height: 1.6;
+    }
+
+    /* SOCIAL ICONS */
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .social-links a {
+      width: 50px;
+      height: 50px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--text);
+      font-size: 1.2rem;
+      transition: 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: var(--accent);
+      color: #000;
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+    }
+
+    /* BOTTOM */
+    .footer-bottom {
+      margin-top: 2rem;
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+      font-size: 0.9rem;
+    }
+
+address {
+  font-style: normal;
+  color: var(--muted);
+  margin-top: 1rem;
+}
+
+h3,
+p {
+  padding-bottom: 1em;
+}
+
+.company-details {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1em;
+}
+
+summary {
+  padding-bottom: 1em;
+}
+
+.batch-badge {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.12);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  border-radius: 20px;
+  vertical-align: middle;
+} 
+
+/* AI */
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 0.5rem;
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: rgba(148, 163, 184, 0.12);
+  font-size: 0.95rem;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.skill-primary {
+  background: rgba(74, 222, 128, 0.18);
+  border-color: rgba(74, 222, 128, 0.45);
+  color: #d1fae5;
+}
+
+.skill-secondary {
+  background: rgba(148, 163, 184, 0.14);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.skill-chip:hover {
+  transform: translateY(-3px);
+}
+
+.skill-primary:hover {
+  background: #22c55e;
+  border-color: #22c55e;
+  color: #020617;
+}
+
+.skill-secondary:hover {
+  background: #334155;
+  border-color: #64748b;
+}
+
+/* AI */
+
+.see-more-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.see-more-btn-exp,
+.see-more-btn-pro,
+.see-more-btn-skills,
+.see-more-btn-edu,
+.see-more-btn-cert {
+  background: #0f172a;
+  color: #ffffff;
+  border: 1px solid #334155;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.see-more-btn-exp i,
+.see-more-btn-pro i,
+.see-more-btn-skills i,
+.see-more-btn-edu i,
+.see-more-btn-cert i {
+  margin-right: 8px;
+  font-size: 12px;
+}
+
+.see-more-btn-exp:hover,
+.see-more-btn-pro:hover,
+.see-more-btn-skills:hover,
+.see-more-btn-edu:hover,
+.see-more-btn-cert:hover {
+  background: #1e293b;
+  border-color: #475569;
+  transform: translateY(-2px);
+}
+
+.see-more-experiences {
+  display: none;
+}
+
+.see-more-experiences.active {
+  display: block;
+}
+
+.see-more-projects {
+  display: none;
+}
+
+.see-more-projects.active {
+  display: block;
+}
+
+.see-more-skills {
+  display: none;
+}
+
+.see-more-skills.active {
+  display: block;
+}
+
+.see-more-edu {
+  display: none;
+}
+
+.see-more-edu.active {
+  display: block;
+}
+
+.see-more-cert {
+  display: none;
+}
+
+.see-more-cert.active {
+  display: block;
+}
+
+.fixed-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  /* subtle backdrop so content behind doesn't show through */
+  background: rgba(2,6,23,0.9);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+/* When JS toggles this class the nav becomes fixed to viewport */
+.fixed-nav.is-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 0 4px 18px rgba(2,6,23,0.6);
+  padding-left: 16px;
+}
+
+/* Spacer inserted after the nav to preserve layout when nav is fixed */
+.nav-spacer {
+  height: 0;
+  /* transition: height 0.12s ease; */
+}
+
+#summary,
+#skills,
+#experience,
+#projects,
+#educations,
+#certifications {
+  scroll-margin-top: 90px; /* Adjust based on nav height */
+}
+
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  
+  nav ul {
+    flex-direction: column;
+  }
+}
