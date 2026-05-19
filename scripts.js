@@ -77,6 +77,7 @@ see_more_btn_cert.addEventListener("click", () => {
 
 
 // Sticky -> Fixed navbar toggle: when the nav reaches the top it becomes fixed
+// Disabled on mobile view to avoid mobile layout issues
 document.addEventListener('DOMContentLoaded', () => {
   const fixedNav = document.querySelector('.fixed-nav');
   if (!fixedNav) return;
@@ -86,9 +87,22 @@ document.addEventListener('DOMContentLoaded', () => {
   spacer.className = 'nav-spacer';
   fixedNav.parentNode.insertBefore(spacer, fixedNav.nextSibling);
 
+  const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
   let navTop = fixedNav.getBoundingClientRect().top + window.scrollY;
 
+  const resetNav = () => {
+    if (fixedNav.classList.contains('is-fixed')) {
+      fixedNav.classList.remove('is-fixed');
+    }
+    spacer.style.height = '0px';
+  };
+
   function update() {
+    if (isMobile()) {
+      resetNav();
+      return;
+    }
+
     if (window.scrollY >= navTop) {
       if (!fixedNav.classList.contains('is-fixed')) {
         const h = Math.round(fixedNav.getBoundingClientRect().height);
@@ -105,10 +119,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', update, { passive: true });
   window.addEventListener('resize', () => {
-    // recalculate positions and spacer height on resize
     navTop = fixedNav.getBoundingClientRect().top + window.scrollY - (fixedNav.classList.contains('is-fixed') ? fixedNav.getBoundingClientRect().height : 0);
+    if (isMobile()) {
+      resetNav();
+      return;
+    }
     if (fixedNav.classList.contains('is-fixed')) {
       spacer.style.height = Math.round(fixedNav.getBoundingClientRect().height) + 'px';
     }
   });
+
+  update();
 });
