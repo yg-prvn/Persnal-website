@@ -25,11 +25,6 @@ a {
   text-decoration: none;
 }
 
-img {
-  width: 100%;
-  border-radius: 10px;
-}
-
 header,
 nav,
 main,
@@ -81,16 +76,6 @@ aside {
 
 article {
   margin-top: 1rem;
-}
-
-figure {
-  margin: 1rem 0;
-}
-
-figcaption {
-  color: var(--muted);
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
 }
 
 details {
