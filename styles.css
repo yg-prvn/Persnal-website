@@ -45,6 +45,13 @@ header {
   border-bottom: 1px solid var(--border);
 }
 
+.title-sec {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* Hola */
+
 nav ul {
   display: flex;
   gap: 1rem;
