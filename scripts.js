@@ -6,6 +6,13 @@ menuBtn.onclick = () => {
     navBar.classList.toggle("active");
 }
 
+let navLinks = document.querySelectorAll("nav ul li a");
+
+navLinks.onclick = () => {
+    menuBtn.classList.toggle("fa-times");
+    navBar.classList.toggle("active");
+}
+
 let see_more_btn_exp = document.querySelector(".see-more-btn-exp");
 let see_more_exp = document.querySelector(".see-more-experiences");
 let see_more_btn_pro = document.querySelector(".see-more-btn-pro");
